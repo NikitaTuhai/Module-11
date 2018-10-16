@@ -1,0 +1,47 @@
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  left: 110px;
+  top: 10px;
+  z-index: 10;
+  width: 1217px;
+  color: $primary-white-color;
+  &__site-logo {
+    font-family: $main-font-stack;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+.nav {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: $main-font-regular;
+  margin-top: 11px;
+  &-list__item {
+    text-transform: uppercase;
+    display: inline-flex;
+  }
+  &-list__link {
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: $primary-white-color;
+    margin-left: 30px;
+    margin-right: 30px;
+    &--active:hover {
+      cursor: pointer;
+      color: $nav-color;
+      border-bottom: 3px solid;
+      border-color: $nav-color;
+    }
+  }
+}
+%nav-svg {
+  cursor: pointer;
+  margin: 0px 0px -4px 40px;
+}
+.nav_svg-shop,
+.nav_svg-search {
+  @extend %nav-svg;
+}

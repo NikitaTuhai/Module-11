@@ -1,0 +1,120 @@
+.team-name {
+  text-align: center;
+  margin-top: 40px;
+
+  &__under-title {
+    margin: 0 auto 20px auto;
+    font-family: $lead-font-stack;
+    font-size: 24px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: $main-font-stack;
+    text-transform: uppercase;
+    &--underline::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3.5px;
+      background-color: $line-color;
+      margin-top: 37px;
+      margin-right: auto;
+      margin-bottom: 48px;
+      margin-left: auto;
+    }
+  }
+  &__text {
+    font-family: $servic-font-roboto;
+    font-size: 15px;
+    color: $servic-text-color;
+    width: 72%;
+    margin: 33px auto;
+  }
+}
+
+.fotocards {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 90px auto;
+}
+
+.member-card {
+  position: relative;
+  display: flex;
+  padding: 0;
+  &__icons {
+    position: absolute;
+    left: 21%;
+    top: 48%;
+    display: inline-flex;
+    cursor: pointer;
+    opacity: 0;
+  }
+  &__wrapper {
+    transition: 0.2s linear;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 21px;
+    display: inline-flex;
+
+    &--hover:hover {
+      transform: translate(-4%, -2%);
+      box-shadow: 15px 10px #95e1d3;
+      opacity: 1;
+    }
+  }
+}
+
+%opacity {
+  opacity: 1;
+}
+.member-card__wrapper--hover:hover
+  .member-card__gradient--hover
+  .member-card__icons {
+  @extend %opacity;
+}
+
+.member-card__gradient {
+  background-image: $linear-gradient-color;
+  width: 385px;
+  height: 473px;
+  top: 0%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.2s;
+}
+.member-card__wrapper--hover:hover .member-card__gradient--hover {
+  opacity: 1;
+}
+
+.member-card:hover .member-card__icons {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid $social-icons-border-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $backgrond-icons-color;
+}
+
+.icon-wrapper--hover .icons--hover {
+  fill: $icon-hover;
+}
+.icon-wrapper--hover:hover {
+  background-color: $icon-hover;
+  border: 1px solid $icon-hover;
+}
+
+.icon-wrapper--hover:hover {
+  fill: $primary-white-color;
+}
+.icon-wrapper--hover:hover .icons--hover {
+  fill: $primary-white-color;
+}

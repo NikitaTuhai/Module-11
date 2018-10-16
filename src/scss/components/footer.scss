@@ -1,0 +1,84 @@
+.footer {
+  padding-bottom: 10px;
+  border-top: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  width: 1204px;
+  margin: 138px auto 0 auto;
+}
+
+.copyright--before::before {
+  content: "\00A9";
+  vertical-align: center;
+  margin-right: 4px;
+  color: $primary-dark-color;
+}
+
+.copyright {
+  margin-top: 24px;
+  font-family: $main-font-stack;
+  font-size: 14px;
+  font-weight: 400;
+  color: $primary-dark-color;
+
+  &__link {
+    color: $link-color;
+  }
+}
+
+.email {
+  margin-top: 11px;
+}
+
+form {
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  height: 16.5px;
+  width: 229px;
+  font-family: $text-font-stack;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  color: $input-color;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  color: $input-color;
+  font-style: italic;
+}
+
+::-ms-input-placeholder {
+  color: $input-color;
+  font-style: italic;
+}
+
+::placeholder {
+  color: $input-color;
+  font-style: italic;
+}
+
+.subscribe__btn {
+  padding: 13px 34px;
+  border: none;
+  background: none;
+  background-color: $btn-background-color;
+  color: $primary-white-color;
+  font-family: $main-font-stack;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translateX(-3.5%);
+  opacity: 0.7;
+  transition: 0.2s linear;
+}
+
+.subscribe:hover {
+  cursor: pointer;
+  opacity: 1;
+}

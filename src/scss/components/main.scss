@@ -1,0 +1,50 @@
+.main {
+  position: relative;
+  z-index: 3;
+  color: $primary-white-color;
+  background-image: url(../img/background-min.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 221px;
+  &-wrapper {
+    text-align: center;
+    margin-bottom: 78px;
+    &__under-title {
+      padding-top: 235px;
+      margin: 0 auto 20px auto;
+      font-family: $lead-font-stack;
+      font-size: 72px;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: 140px;
+      font-family: $main-font-stack;
+      text-transform: uppercase;
+      width: 820px;
+      text-align: center;
+      margin: auto;
+    }
+  }
+}
+.wrapper-button {
+  text-align: center;
+  &__button {
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    border: 3px solid $primary-white-color;
+    text-transform: uppercase;
+    font-family: $main-font-stack;
+    font-weight: bold;
+    background-image: none;
+    background: transparent;
+    color: $primary-white-color;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .main {
+    background: url("../img/background@2x-min.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
